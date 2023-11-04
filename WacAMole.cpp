@@ -2,7 +2,10 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <limits>
 
+
+using namespace std;
 class Timer {
 private:
     int timeLeft;
@@ -79,7 +82,7 @@ private:
     LEDMatrix ledMatrix;
     Player currentPlayer;
 public:
-    GameController() : currentScore(0) {}
+    GameController() : currentScore(0) {}                                                           
 
     void startGame() {
         std::cout << "Game started!\n";
@@ -98,11 +101,59 @@ public:
 };
 
 int main() {
-    GameController game;
-    game.startGame();
+    srand(static_cast<unsigned int>(time(0))); // Seed for randomness
+    GameController game; // Instantiate GameController
+    Player player;
+    string playerName; // Declare playerName variable
+    int choice; // Declare choice variable
+    
+    bool running = true;
+    while (running) {
+        cout << "Whack-a-LED Game\n";
+        cout << "1. Start Game\n";
+        cout << "2. Instructions\n";
+        cout << "3. High Scores\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
 
-    // Game Logic
+        switch (choice) {
+            case 1:
+                cout << "Enter player name: ";
+                cin >> playerName;
+                player.setName(playerName);
+                
+                game.startGame();
+                
+                // Game logic goes here
+                game.endGame();
+                break;
+            case 2:
+                cout << "Instructions:\n";
+                cout << "- The LED matrix will light up in random patterns.\n";
+                cout << "- Your goal is to 'hit' the lit LED by pressing the enter key as soon as it lights up.\n";
+                cout << "- The faster you hit, the more points you score.\n";
+                cout << "- You have a limited amount of time to score as many points as possible.\n\n";
+                break;
+            case 3:
+                cout << "High Scores: \n";
+                // Code to display high scores goes here
+                break;
+            case 4:
+                running = false;
+                break;
+            default:
+                cout << "Invalid choice, please try again.\n";
+                break;
+        }
 
-    game.endGame();
+        // Clear the input buffer in case of invalid input
+        if (cin.fail()) {
+            cin.clear(); // Clear the error flag
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore remaining input
+        }
+    }
+        
+
     return 0;
 }
