@@ -3,7 +3,9 @@
 #include <cstdlib>
 #include <ctime>
 #include <limits>
-
+#include <map>
+#include <string>
+#include <fstream>
 
 using namespace std;
 class Timer {
@@ -75,6 +77,53 @@ public:
     }
 };
 
+// How we add to print HighScores
+class HighScore {
+    //Ordered Map
+    std::multimap<int, std::string > highScoresMap;
+private:
+    int score;
+    std::string name;
+    int count;
+
+public:
+    void print() {
+        std::ifstream inputFile("../highScores.txt");
+        //Iterates through file under schema "number score"
+        if (inputFile.is_open()) {
+            while (inputFile >> name >> score) {
+                highScoresMap.insert(std::make_pair(score, name));
+            }
+            inputFile.close();
+        } else {
+            std::cerr << "Unable to open the file." << std::endl;
+        }
+        //Title
+        std::cout << "Name " << "Score" << std::endl;
+        // Iterates for the first 5 highest scores
+        count = 0;
+        for (auto rit = highScoresMap.rbegin(); rit != highScoresMap.rend() && count < 5; rit++) {
+            std::cout << rit->second << " " << rit->first << std::endl;
+            count++;
+        }
+        //Clears so it doesn't print duplicates
+        highScoresMap.clear();
+
+    }
+    //adding to file
+    void add(int score, std::string playerName) {
+        // Open the file for appending
+        std::ofstream outputFile("../highScores.txt", std::ios::app);
+        if (outputFile.is_open()) {
+            // Write new data to the file
+            outputFile << std::endl << playerName << " " << score;
+            outputFile.close();
+        } else {
+            std::cerr << "Unable to open the file for writing." << std::endl;
+        }
+    }
+};
+
 class GameController {
 private:
     int currentScore;
@@ -82,7 +131,7 @@ private:
     LEDMatrix ledMatrix;
     Player currentPlayer;
 public:
-    GameController() : currentScore(0) {}                                                           
+    GameController() : currentScore(0) {}
 
     void startGame() {
         std::cout << "Game started!\n";
@@ -96,17 +145,21 @@ public:
     }
 
     void incrementScore() {
-        currentScore += 10;  
+        currentScore += 10;
+    }
+    int getScore () {
+        return currentScore;
     }
 };
 
 int main() {
+    HighScore highScore;
     srand(static_cast<unsigned int>(time(0))); // Seed for randomness
     GameController game; // Instantiate GameController
     Player player;
     string playerName; // Declare playerName variable
     int choice; // Declare choice variable
-    
+
     bool running = true;
     while (running) {
         cout << "Whack-a-LED Game\n";
@@ -122,10 +175,11 @@ int main() {
                 cout << "Enter player name: ";
                 cin >> playerName;
                 player.setName(playerName);
-                
+
                 game.startGame();
-                
+
                 // Game logic goes here
+                highScore.add(game.getScore(), playerName);
                 game.endGame();
                 break;
             case 2:
@@ -137,7 +191,7 @@ int main() {
                 break;
             case 3:
                 cout << "High Scores: \n";
-                // Code to display high scores goes here
+                highScore.print();
                 break;
             case 4:
                 running = false;
@@ -153,7 +207,7 @@ int main() {
             cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore remaining input
         }
     }
-        
+
 
     return 0;
 }
