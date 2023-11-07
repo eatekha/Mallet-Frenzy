@@ -4,3 +4,9 @@ name 8
 name 10
 player1 0
 player2 0
+aery 27
+AeRy 14
+PRaC 30
+OOO 0
+Aeryy 0
+sery 10
