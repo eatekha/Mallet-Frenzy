@@ -16,52 +16,103 @@
 #include <string>
 
 using namespace std;
+
+/**
+ * @brief Class representing a countdown timer.
+ */
+ 
 class Timer {
 private:
     int timeLeft;
 public:
+    /**
+     * @brief Construct a new Timer object with default time left as 30 seconds.
+     */
     Timer() : timeLeft(30) {}
-
+    
+    /**
+     * @brief Displays the start countdown message.
+     */
     void start() {
         // Start the countdown
         std::cout << "Timer started!\n";
     }
-
+    
+    /**
+     * @brief Displays the stop countdown message.
+     */
     void stop() {
         // Stop the countdown
         std::cout << "Timer stopped!\n";
     }
-
+    
+    /**
+     * @brief Get the Time Left on the timer.
+     * 
+     * @return int Time left in seconds.
+     */
     int getTimeLeft() const {
         return timeLeft;
     }
 };
 
+/**
+ * @brief Class representing an LED.
+ */
 class LED {
 private:
     bool status;
 public:
+    
+    /**
+     * @brief Construct a new LED object with initial status as off.
+     */
     LED() : status(false) {}
-
+    
+    /**
+     * @brief Turns on the LED.
+     */
     void turnOn() {
         status = true;
     }
-
+    
+    /**
+     * @brief Turns off the LED.
+     */
     void turnOff() {
         status = false;
     }
-
+    
+    /**
+     * @brief Checks if the LED is on.
+     * 
+     * @return true If LED is on.
+     * @return false If LED is off.
+     */
     bool isOn() const {
         return status;
     }
 };
 
+/**
+ * @brief Class representing a matrix of LEDs.
+ */
 class LEDMatrix {
 private:
     std::vector<LED> leds;
 public:
+    /**
+     * @brief Construct a new LEDMatrix object with a default size of 16 LEDs.
+     */
     LEDMatrix() : leds(16) {}
-
+    
+    /**
+     * @brief Lights up a random LED in the matrix.
+     * 
+     * @param currentLedPin Current LED pin number.
+     * @param keyToLedMap Map linking characters to LED pins.
+     * @return int The pin number of the LED that was lit.
+     */
     int lightUpRandomLED(int currentLedPin, std::unordered_map<char, int>& keyToLedMap) {
         // Random number generator setup
         std::random_device rd;
@@ -78,23 +129,41 @@ public:
     }
 };
 
+/**
+ * @brief Class representing a player in the game.
+ */
 class Player {
 private:
     std::string name;
     int score;
 public:
+    /**
+     * @brief Construct a new Player object with a default score of 0.
+     */
     Player() : score(0) {}
 
+    /**
+     * @brief Sets the name of the player.
+     * 
+     * @param n The name of the player.
+     */
     void setName(const std::string& n) {
         name = n;
     }
 
+    /**
+     * @brief Get the Score of the player.
+     * 
+     * @return int The current score of the player.
+     */
     int getScore() const {
         return score;
     }
 };
 
-// How we add to print HighScores
+/**
+ * @brief Class for managing high scores.
+ */
 class HighScore {
     //Ordered Map
     std::multimap<int, std::string > highScoresMap;
@@ -104,6 +173,9 @@ private:
     int count;
 
 public:
+    /**
+     * @brief Prints the top 5 high scores.
+     */
     void print() {
         std::ifstream inputFile("highScores.txt");
         //Iterates through file under schema "number score"
@@ -127,7 +199,13 @@ public:
         highScoresMap.clear();
 
     }
-    //adding to file
+    
+    /**
+     * @brief Adds a new high score to the file.
+     * 
+     * @param score The score to add.
+     * @param playerName The name of the player.
+     */
     void add(int score, std::string playerName) {
         // Open the file for appending
         std::ofstream outputFile("highScores.txt", std::ios::app);
@@ -141,6 +219,9 @@ public:
     }
 };
 
+/**
+ * @brief Controller class for the game.
+ */
 class GameController {
 private:
     int currentScore;
@@ -148,13 +229,22 @@ private:
     LEDMatrix ledMatrix;
     Player currentPlayer;
 public:
+    /**
+     * @brief Construct a new GameController object.
+     */
     GameController() : currentScore(0) {}
-
+    
+    /**
+     * @brief Starts the game, initializes the timer.
+     */
     void startGame() {
         std::cout << "Game started!\n";
         timer.start();
     }
     
+    /**
+     * @brief Sets up the RasberryPI in order to get ready to run the game
+     */
     void setup(std::unordered_map<char, int>& keyToLedMap) {
         if (gpioInitialise() < 0) {
             throw std::runtime_error("Failed to initialize pigpio.");
@@ -166,6 +256,9 @@ public:
         }
     }
     
+    /**
+     * @brief Main logic of the Wac A Mole Game
+     */
     void inGame(Player& player, HighScore& highScore, std::unordered_map<char, int>& keyToLedMap)
     {
         // Game logic
@@ -261,16 +354,28 @@ public:
             gpioTerminate();
         }
     }
-
+    
+    /**
+     * @brief End message when the game is over
+     */
     void endGame() {
         std::cout << "Game ended!\n";
         timer.stop();
         std::cout << "Final score: " << currentScore << "\n";
     }
-
+    
+    /**
+     * @brief Increments value of score by 1
+     */
     void incrementScore() {
-        currentScore += 10;
+        currentScore += 1;
     }
+    
+    /**
+     * @brief Retrieve Current Score
+     * 
+     * @return int Returns the Current Score
+     */
     int getScore () {
         return currentScore;
     }
@@ -314,7 +419,11 @@ std::unordered_map<char, int> keyToLedMap = {
     {'m', led16}
 };
 
-
+/**
+ * @brief Main entry point for the Whack-a-LED game.
+ * 
+ * @return int Returns 0 upon successful execution.
+ */
 int main() {
     HighScore highScore;
     srand(static_cast<unsigned int>(time(0))); // Seed for randomness
