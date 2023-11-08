@@ -453,7 +453,13 @@ int main() {
                 cout << "- The LED matrix will light up in random patterns.\n";
                 cout << "- Your goal is to 'hit' the lit LED by pressing the enter key as soon as it lights up.\n";
                 cout << "- The faster you hit, the more points you score.\n";
-                cout << "- You have a limited amount of time to score as many points as possible.\n\n";
+                cout << "- The keybinds for the 4x4 matrix are set as follows:\n";
+                cout << "- 4  5  6  7\n";
+                cout << "- r  t  y  u\n";
+                cout << "- f  g  h  j\n";
+                cout << "- v  b  n  m\n";
+                cout << "- You have 30 seconds to score as many points as possible.\n\n";
+                
                 break;
             case 3:
                 cout << "High Scores: \n";

@@ -10,3 +10,4 @@ PRaC 30
 OOO 0
 Aeryy 0
 sery 10
+clear 3
