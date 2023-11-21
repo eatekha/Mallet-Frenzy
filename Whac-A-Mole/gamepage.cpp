@@ -6,6 +6,7 @@
 #include <QPropertyAnimation>
 #include <QSequentialAnimationGroup>
 #include <QDebug>
+#include "playpage.h"
 
 // Define the animation function
 void animateButton(QPushButton* button) {
@@ -73,6 +74,11 @@ GamePage::GamePage(const QSize &size, QWidget *parent)
 }
 
 void GamePage::startGame() {
-    qDebug() << "Play button clicked, starting the game.";
-    // Implement game start logic here
+    qDebug() << "Play button clicked, transitioning to play page.";
+    // Hide the current game instructions page
+    this->hide();
+
+    // Create and show the play page
+    PlayPage *playPage = new PlayPage(this->size(), this->parentWidget()); // Pass the size and parent
+    playPage->show();
 }

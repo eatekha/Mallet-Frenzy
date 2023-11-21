@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         gamepage.cpp
         scorespage.h
         scorespage.cpp
+        playpage.h
+        playpage.cpp
 
 
 
