@@ -22,6 +22,7 @@ private:
     QPushButton *setupButtonWithImage(const QString &imagePath, const QSize &size); // Include QSize parameter
 
     QPushButton *startButton;
+
     QPushButton *gamescoresButton;
     QPushButton *exitButton;
 

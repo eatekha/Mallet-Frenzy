@@ -8,6 +8,7 @@
 #include <QSequentialAnimationGroup>
 #include "gamepage.h"
 #include "scorespage.h"
+#include <QMovie>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,21 +24,44 @@ MainWindow::MainWindow(QWidget *parent)
     backgroundLabel->setScaledContents(true);
     backgroundLabel->setGeometry(this->rect());
 
+    // Create a QLabel for the GIF
+    QLabel *gifLabel = new QLabel(this);
+    QMovie *movie = new QMovie("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/molegif.gif");
+    if (movie->isValid()) {
+        gifLabel->setMovie(movie);
+        movie->start();
+    } else {
+        qDebug() << "Failed to load the GIF.";
+    }
+
+    gifLabel->setScaledContents(true); // Ensure the GIF scales with the label size
+    int gifWidth = 170; // Set desired width for the GIF
+    int gifHeight = 170; // Set desired height for the GIF
+    gifLabel->setFixedSize(gifWidth, gifHeight);
+    gifLabel->setAlignment(Qt::AlignCenter);
+
+
     // Create a central widget and layout
     QWidget *centralWidget = new QWidget(this);
     QVBoxLayout *layout = new QVBoxLayout(centralWidget);
 
+    // Add stretch before the GIF label to push it down
+    layout->addStretch(15);
+
+    // Add the GIF label to the layout
+    layout->addWidget(gifLabel, 0, Qt::AlignCenter);
+
     // Initialize buttons with images
-    startButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/pressstart.png", QSize(190, 80));
-    gamescoresButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/gamescores.png", QSize(190, 80));
-    exitButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/exit.png", QSize(190, 80));
+    startButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/pressstart.png", QSize(200, 80));
+    gamescoresButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/gamescores.png", QSize(200, 80));
+    exitButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/exit.png", QSize(200, 80));
 
     // Add buttons to layout
     layout->addStretch(1);
     layout->addWidget(startButton, 0, Qt::AlignCenter);
     layout->addWidget(gamescoresButton, 0, Qt::AlignCenter);
     layout->addWidget(exitButton, 0, Qt::AlignCenter);
-    layout->addStretch(0);
+    layout->addStretch(1);
 
     centralWidget->setLayout(layout);
     setCentralWidget(centralWidget);
@@ -95,13 +119,15 @@ void MainWindow::on_startButton_clicked() {
     gamePage->show(); // Show the game page
 }
 
-void MainWindow::on_gamescoresButton_clicked() {
-    qDebug() << "High Scores button clicked!";
-    QSize currentSize = this->size();
-    this->hide();
+#include "scorespage.h"
+// ...
 
-    ScoresPage *scoresPage = new ScoresPage(currentSize, this);
-    scoresPage->show();
+void MainWindow::on_gamescoresButton_clicked() {
+    QSize currentSize = this->size(); // Get the current size of MainWindow
+    this->hide(); // Hide the main window
+
+    ScoresPage *scoresPage = new ScoresPage(currentSize); // Pass the size to ScoresPage
+    scoresPage->show(); // Show the scores page
 }
 
 void MainWindow::on_exitButton_clicked() {
