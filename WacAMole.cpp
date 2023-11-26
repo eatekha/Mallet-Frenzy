@@ -367,6 +367,7 @@ int main() {
                 game.startGame();
                 game.inGame(player, highScore);
                 game.endGame(player);
+
                 break;
             case 2:
                 cout << "Instructions:\n";
@@ -379,17 +380,20 @@ int main() {
                 cout << "- f  g  h  j\n";
                 cout << "- v  b  n  m\n";
                 cout << "- You have 30 seconds to score as many points as possible.\n\n";
-                
+
                 break;
             case 3:
                 cout << "High Scores: \n";
                 highScore.print();
+                getch();
+
                 break;
             case 4:
                 running = false;
                 break;
             default:
                 cout << "Invalid choice, please try again.\n";
+
                 break;
         }
 
@@ -399,6 +403,7 @@ int main() {
             cin.clear(); // Clear the error flag
             cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore remaining input
         }
+        
     }
 
 

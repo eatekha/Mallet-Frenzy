@@ -38,7 +38,7 @@ GamePage::GamePage(const QSize &size, QWidget *parent)
 
     // Create a label to display the image with instructions
     QLabel *instructionsImageLabel = new QLabel(this);
-    QPixmap instructionsPixmap("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/ruleimage.png");
+    QPixmap instructionsPixmap("ruleimage.png");
 
     if (!instructionsPixmap.isNull()) {
         QSize scaledSize = size * 0.9; // Example: Scale down to 90% of the GamePage size
@@ -50,7 +50,7 @@ GamePage::GamePage(const QSize &size, QWidget *parent)
 
     // Create a PLAY button using an image
     QPushButton *playButton = new QPushButton(this);
-    QPixmap playButtonPixmap("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/play.png");
+    QPixmap playButtonPixmap("play.png");
 
     if (!playButtonPixmap.isNull()) {
         playButtonPixmap = playButtonPixmap.scaled(QSize(190, 70), Qt::KeepAspectRatio, Qt::SmoothTransformation);

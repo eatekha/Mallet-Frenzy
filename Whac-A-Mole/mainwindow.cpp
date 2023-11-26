@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     setFixedSize(900, 758);
 
     // Set background image
-    QPixmap background("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/mainbgimage.png");
+    QPixmap background("mainbgimage.png");
     QLabel *backgroundLabel = new QLabel(this);
     backgroundLabel->setPixmap(background.scaled(this->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     backgroundLabel->setScaledContents(true);
@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Create a QLabel for the GIF
     QLabel *gifLabel = new QLabel(this);
-    QMovie *movie = new QMovie("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/molegif.gif");
+    QMovie *movie = new QMovie("molegif.gif");
     if (movie->isValid()) {
         gifLabel->setMovie(movie);
         movie->start();
@@ -52,9 +52,9 @@ MainWindow::MainWindow(QWidget *parent)
     layout->addWidget(gifLabel, 0, Qt::AlignCenter);
 
     // Initialize buttons with images
-    startButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/pressstart.png", QSize(200, 80));
-    gamescoresButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/gamescores.png", QSize(200, 80));
-    exitButton = setupButtonWithImage("C:/Users/rexgu/Documents/Whac-A-Mole/Whac-A-Mole/exit.png", QSize(200, 80));
+    startButton = setupButtonWithImage("pressstart.png", QSize(200, 80));
+    gamescoresButton = setupButtonWithImage("gamescores.png", QSize(200, 80));
+    exitButton = setupButtonWithImage("exit.png", QSize(200, 80));
 
     // Add buttons to layout
     layout->addStretch(1);
