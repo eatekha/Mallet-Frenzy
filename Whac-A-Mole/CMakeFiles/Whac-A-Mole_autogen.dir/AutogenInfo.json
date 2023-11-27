@@ -75,6 +75,31 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/GameController.h",
+			"MU",
+			"3M43WZ4VJO/moc_GameController.cpp"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/HighScore.h",
+			"MU",
+			"3M43WZ4VJO/moc_HighScore.cpp"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.h",
+			"MU",
+			"3M43WZ4VJO/moc_LEDMatrix.cpp"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.h",
+			"MU",
+			"3M43WZ4VJO/moc_Player.cpp"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.h",
+			"MU",
+			"3M43WZ4VJO/moc_Timer.cpp"
+		],
+		[
 			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/gamepage.h",
 			"MU",
 			"EWIEGA46WW/moc_gamepage.cpp"
@@ -145,6 +170,26 @@
 	"SETTINGS_FILE" : "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/GameController.cpp",
+			"MU"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/HighScore.cpp",
+			"MU"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.cpp",
+			"MU"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.cpp",
+			"MU"
+		],
+		[
+			"/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.cpp",
+			"MU"
+		],
 		[ "/home/rasberrypi/Desktop/group7/Whac-A-Mole/gamepage.cpp", "MU" ],
 		[ "/home/rasberrypi/Desktop/group7/Whac-A-Mole/main.cpp", "MU" ],
 		[ "/home/rasberrypi/Desktop/group7/Whac-A-Mole/mainwindow.cpp", "MU" ],

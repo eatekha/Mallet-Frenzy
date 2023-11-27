@@ -201,6 +201,141 @@ Whac-A-Mole_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole_autogen.dir/build.make CMakeFiles/Whac-A-Mole_autogen.dir/build
 .PHONY : Whac-A-Mole_autogen/fast
 
+Hardware/GameController.o: Hardware/GameController.cpp.o
+
+.PHONY : Hardware/GameController.o
+
+# target to build an object file
+Hardware/GameController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o
+.PHONY : Hardware/GameController.cpp.o
+
+Hardware/GameController.i: Hardware/GameController.cpp.i
+
+.PHONY : Hardware/GameController.i
+
+# target to preprocess a source file
+Hardware/GameController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.i
+.PHONY : Hardware/GameController.cpp.i
+
+Hardware/GameController.s: Hardware/GameController.cpp.s
+
+.PHONY : Hardware/GameController.s
+
+# target to generate assembly for a file
+Hardware/GameController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.s
+.PHONY : Hardware/GameController.cpp.s
+
+Hardware/HighScore.o: Hardware/HighScore.cpp.o
+
+.PHONY : Hardware/HighScore.o
+
+# target to build an object file
+Hardware/HighScore.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o
+.PHONY : Hardware/HighScore.cpp.o
+
+Hardware/HighScore.i: Hardware/HighScore.cpp.i
+
+.PHONY : Hardware/HighScore.i
+
+# target to preprocess a source file
+Hardware/HighScore.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.i
+.PHONY : Hardware/HighScore.cpp.i
+
+Hardware/HighScore.s: Hardware/HighScore.cpp.s
+
+.PHONY : Hardware/HighScore.s
+
+# target to generate assembly for a file
+Hardware/HighScore.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.s
+.PHONY : Hardware/HighScore.cpp.s
+
+Hardware/LEDMatrix.o: Hardware/LEDMatrix.cpp.o
+
+.PHONY : Hardware/LEDMatrix.o
+
+# target to build an object file
+Hardware/LEDMatrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o
+.PHONY : Hardware/LEDMatrix.cpp.o
+
+Hardware/LEDMatrix.i: Hardware/LEDMatrix.cpp.i
+
+.PHONY : Hardware/LEDMatrix.i
+
+# target to preprocess a source file
+Hardware/LEDMatrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.i
+.PHONY : Hardware/LEDMatrix.cpp.i
+
+Hardware/LEDMatrix.s: Hardware/LEDMatrix.cpp.s
+
+.PHONY : Hardware/LEDMatrix.s
+
+# target to generate assembly for a file
+Hardware/LEDMatrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.s
+.PHONY : Hardware/LEDMatrix.cpp.s
+
+Hardware/Player.o: Hardware/Player.cpp.o
+
+.PHONY : Hardware/Player.o
+
+# target to build an object file
+Hardware/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o
+.PHONY : Hardware/Player.cpp.o
+
+Hardware/Player.i: Hardware/Player.cpp.i
+
+.PHONY : Hardware/Player.i
+
+# target to preprocess a source file
+Hardware/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.i
+.PHONY : Hardware/Player.cpp.i
+
+Hardware/Player.s: Hardware/Player.cpp.s
+
+.PHONY : Hardware/Player.s
+
+# target to generate assembly for a file
+Hardware/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.s
+.PHONY : Hardware/Player.cpp.s
+
+Hardware/Timer.o: Hardware/Timer.cpp.o
+
+.PHONY : Hardware/Timer.o
+
+# target to build an object file
+Hardware/Timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o
+.PHONY : Hardware/Timer.cpp.o
+
+Hardware/Timer.i: Hardware/Timer.cpp.i
+
+.PHONY : Hardware/Timer.i
+
+# target to preprocess a source file
+Hardware/Timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.i
+.PHONY : Hardware/Timer.cpp.i
+
+Hardware/Timer.s: Hardware/Timer.cpp.s
+
+.PHONY : Hardware/Timer.s
+
+# target to generate assembly for a file
+Hardware/Timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.s
+.PHONY : Hardware/Timer.cpp.s
+
 Whac-A-Mole_autogen/mocs_compilation.o: Whac-A-Mole_autogen/mocs_compilation.cpp.o
 
 .PHONY : Whac-A-Mole_autogen/mocs_compilation.o
@@ -377,6 +512,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Whac-A-Mole_autogen"
 	@echo "... Whac-A-Mole"
+	@echo "... Hardware/GameController.o"
+	@echo "... Hardware/GameController.i"
+	@echo "... Hardware/GameController.s"
+	@echo "... Hardware/HighScore.o"
+	@echo "... Hardware/HighScore.i"
+	@echo "... Hardware/HighScore.s"
+	@echo "... Hardware/LEDMatrix.o"
+	@echo "... Hardware/LEDMatrix.i"
+	@echo "... Hardware/LEDMatrix.s"
+	@echo "... Hardware/Player.o"
+	@echo "... Hardware/Player.i"
+	@echo "... Hardware/Player.s"
+	@echo "... Hardware/Timer.o"
+	@echo "... Hardware/Timer.i"
+	@echo "... Hardware/Timer.s"
 	@echo "... Whac-A-Mole_autogen/mocs_compilation.o"
 	@echo "... Whac-A-Mole_autogen/mocs_compilation.i"
 	@echo "... Whac-A-Mole_autogen/mocs_compilation.s"

@@ -154,6 +154,71 @@ CMakeFiles/Whac-A-Mole.dir/playpage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Whac-A-Mole.dir/playpage.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasberrypi/Desktop/group7/Whac-A-Mole/playpage.cpp -o CMakeFiles/Whac-A-Mole.dir/playpage.cpp.s
 
+CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o: CMakeFiles/Whac-A-Mole.dir/flags.make
+CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o: Hardware/Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o -c /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.cpp
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.cpp > CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.i
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.cpp -o CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.s
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o: CMakeFiles/Whac-A-Mole.dir/flags.make
+CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o: Hardware/LEDMatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o -c /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.cpp
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.cpp > CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.i
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.cpp -o CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.s
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o: CMakeFiles/Whac-A-Mole.dir/flags.make
+CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o: Hardware/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o -c /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.cpp
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.cpp > CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.i
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.cpp -o CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.s
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o: CMakeFiles/Whac-A-Mole.dir/flags.make
+CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o: Hardware/HighScore.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o -c /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/HighScore.cpp
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/HighScore.cpp > CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.i
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/HighScore.cpp -o CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.s
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o: CMakeFiles/Whac-A-Mole.dir/flags.make
+CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o: Hardware/GameController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o -c /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/GameController.cpp
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/GameController.cpp > CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.i
+
+CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/GameController.cpp -o CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.s
+
 # Object files for target Whac-A-Mole
 Whac__A__Mole_OBJECTS = \
 "CMakeFiles/Whac-A-Mole.dir/Whac-A-Mole_autogen/mocs_compilation.cpp.o" \
@@ -161,7 +226,12 @@ Whac__A__Mole_OBJECTS = \
 "CMakeFiles/Whac-A-Mole.dir/mainwindow.cpp.o" \
 "CMakeFiles/Whac-A-Mole.dir/gamepage.cpp.o" \
 "CMakeFiles/Whac-A-Mole.dir/scorespage.cpp.o" \
-"CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o"
+"CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o" \
+"CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o" \
+"CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o" \
+"CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o" \
+"CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o" \
+"CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o"
 
 # External object files for target Whac-A-Mole
 Whac__A__Mole_EXTERNAL_OBJECTS =
@@ -172,12 +242,19 @@ Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/mainwindow.cpp.o
 Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/gamepage.cpp.o
 Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/scorespage.cpp.o
 Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o
+Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o
+Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o
+Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o
+Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o
+Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o
 Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/build.make
 Whac-A-Mole: /usr/lib/arm-linux-gnueabihf/libQt5Widgets.so.5.15.2
+Whac-A-Mole: /usr/lib/libpigpio.so
+Whac-A-Mole: /usr/lib/arm-linux-gnueabihf/libncurses.so
 Whac-A-Mole: /usr/lib/arm-linux-gnueabihf/libQt5Gui.so.5.15.2
 Whac-A-Mole: /usr/lib/arm-linux-gnueabihf/libQt5Core.so.5.15.2
 Whac-A-Mole: CMakeFiles/Whac-A-Mole.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Whac-A-Mole"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Whac-A-Mole"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Whac-A-Mole.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
