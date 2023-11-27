@@ -5,7 +5,6 @@
 #include "LEDMatrix.h"
 #include "Player.h"
 #include "HighScore.h"
-#include <ncurses.h>
 
 class GameController {
 public:

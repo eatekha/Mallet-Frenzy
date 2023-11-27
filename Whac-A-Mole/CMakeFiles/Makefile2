@@ -94,12 +94,12 @@ clean: CMakeFiles/Whac-A-Mole_autogen.dir/clean
 CMakeFiles/Whac-A-Mole.dir/all: CMakeFiles/Whac-A-Mole_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target Whac-A-Mole"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target Whac-A-Mole"
 .PHONY : CMakeFiles/Whac-A-Mole.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Whac-A-Mole.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Whac-A-Mole.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles 0
 .PHONY : CMakeFiles/Whac-A-Mole.dir/rule
@@ -121,7 +121,7 @@ CMakeFiles/Whac-A-Mole.dir/clean:
 CMakeFiles/Whac-A-Mole_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole_autogen.dir/build.make CMakeFiles/Whac-A-Mole_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole_autogen.dir/build.make CMakeFiles/Whac-A-Mole_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=13 "Built target Whac-A-Mole_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles --progress-num=14 "Built target Whac-A-Mole_autogen"
 .PHONY : CMakeFiles/Whac-A-Mole_autogen.dir/all
 
 # Build rule for subdir invocation for target.

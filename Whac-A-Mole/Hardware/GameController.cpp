@@ -3,7 +3,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
-
+#include <ncurses.h>
 GameController::GameController() : timer(), ledMatrix(), currentPlayer() {}
 
 void GameController::setup() {

@@ -22,6 +22,7 @@ set(HARDWARE_SOURCES
         Hardware/Player.cpp
         Hardware/HighScore.cpp
         Hardware/GameController.cpp
+        HardwareInterface.cpp  # Add your HardwareInterface.cpp here
 )
 
 set(HARDWARE_HEADERS
@@ -30,6 +31,7 @@ set(HARDWARE_HEADERS
         Hardware/Player.h
         Hardware/HighScore.h
         Hardware/GameController.h
+        HardwareInterface.h   # Add your HardwareInterface.h here
 )
 
 set(PROJECT_SOURCES
@@ -85,3 +87,4 @@ install(TARGETS Whac-A-Mole
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Whac-A-Mole)
 endif()
+

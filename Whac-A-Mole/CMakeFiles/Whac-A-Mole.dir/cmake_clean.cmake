@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o"
   "CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o"
   "CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o"
+  "CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o"
   "CMakeFiles/Whac-A-Mole.dir/Whac-A-Mole_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/Whac-A-Mole.dir/gamepage.cpp.o"
   "CMakeFiles/Whac-A-Mole.dir/main.cpp.o"

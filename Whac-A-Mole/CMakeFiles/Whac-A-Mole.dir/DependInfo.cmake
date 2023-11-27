@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o"
   "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o"
   "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o"
+  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/HardwareInterface.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o"
   "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Whac-A-Mole_autogen/mocs_compilation.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Whac-A-Mole_autogen/mocs_compilation.cpp.o"
   "/home/rasberrypi/Desktop/group7/Whac-A-Mole/gamepage.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/gamepage.cpp.o"
   "/home/rasberrypi/Desktop/group7/Whac-A-Mole/main.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/main.cpp.o"

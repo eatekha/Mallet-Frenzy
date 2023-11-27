@@ -336,6 +336,33 @@ Hardware/Timer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.s
 .PHONY : Hardware/Timer.cpp.s
 
+HardwareInterface.o: HardwareInterface.cpp.o
+
+.PHONY : HardwareInterface.o
+
+# target to build an object file
+HardwareInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o
+.PHONY : HardwareInterface.cpp.o
+
+HardwareInterface.i: HardwareInterface.cpp.i
+
+.PHONY : HardwareInterface.i
+
+# target to preprocess a source file
+HardwareInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.i
+.PHONY : HardwareInterface.cpp.i
+
+HardwareInterface.s: HardwareInterface.cpp.s
+
+.PHONY : HardwareInterface.s
+
+# target to generate assembly for a file
+HardwareInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Whac-A-Mole.dir/build.make CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.s
+.PHONY : HardwareInterface.cpp.s
+
 Whac-A-Mole_autogen/mocs_compilation.o: Whac-A-Mole_autogen/mocs_compilation.cpp.o
 
 .PHONY : Whac-A-Mole_autogen/mocs_compilation.o
@@ -527,6 +554,9 @@ help:
 	@echo "... Hardware/Timer.o"
 	@echo "... Hardware/Timer.i"
 	@echo "... Hardware/Timer.s"
+	@echo "... HardwareInterface.o"
+	@echo "... HardwareInterface.i"
+	@echo "... HardwareInterface.s"
 	@echo "... Whac-A-Mole_autogen/mocs_compilation.o"
 	@echo "... Whac-A-Mole_autogen/mocs_compilation.i"
 	@echo "... Whac-A-Mole_autogen/mocs_compilation.s"
