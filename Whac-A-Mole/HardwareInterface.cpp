@@ -1,5 +1,5 @@
 #include "HardwareInterface.h"
-#include <iostream>
+#include <QTimer>
 
 HardwareInterface::HardwareInterface(QObject *parent)
     : QObject(parent), gameController(), player(), highScore() {
@@ -14,17 +14,29 @@ void HardwareInterface::startGame(const QString& playerName) {
     player.setName(playerName.toStdString());
     gameController.setup();
     gameController.startGame();
+    emit gameStarted(); // Signal game start
 
-    // Example of how to use a QTimer to periodically update the score
-    // QTimer *timer = new QTimer(this);
-    // connect(timer, &QTimer::timeout, this, [this]() {
-    //     emit scoreUpdated(player.getScore());
-    // });
-    // timer->start(1000); // Adjust the interval as needed
+    // Start the timer for 30 seconds
+    gameController.timer.start(); 
+
+    // Update the UI every second with the remaining time
+    QTimer *countdownTimer = new QTimer(this);
+    connect(countdownTimer, &QTimer::timeout, this, [this, countdownTimer]() {
+        if (!gameController.timer.isTimeUp()) {
+            emit countdownUpdated(gameController.timer.getTimeLeft());
+        } else {
+            countdownTimer->stop();
+            countdownTimer->deleteLater(); // Clean up the timer
+            this->stopGame(); // Stop the game when time is up
+        }
+    });
+    countdownTimer->start(1000); // Update every second
 }
+
 
 void HardwareInterface::stopGame() {
     gameController.endGame(player);
     highScore.add(player.getScore(), player.getName());
-    emit gameEnded();
+    emit gameEnded(); // Emit a signal indicating the game has ended
 }
+

@@ -1,5 +1,11 @@
 /home/rasberrypi/Desktop/group7/Whac-A-Mole/Whac-A-Mole_autogen/EWIEGA46WW/moc_playpage.cpp: /home/rasberrypi/Desktop/group7/Whac-A-Mole/playpage.h \
   /home/rasberrypi/Desktop/group7/Whac-A-Mole/Whac-A-Mole_autogen/moc_predefs.h \
+  /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/GameController.h \
+  /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/HighScore.h \
+  /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.h \
+  /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.h \
+  /home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.h \
+  /home/rasberrypi/Desktop/group7/Whac-A-Mole/HardwareInterface.h \
   /usr/include/arm-linux-gnueabihf/bits/cpu-set.h \
   /usr/include/arm-linux-gnueabihf/bits/endian.h \
   /usr/include/arm-linux-gnueabihf/bits/endianness.h \
@@ -52,6 +58,7 @@
   /usr/include/arm-linux-gnueabihf/c++/10/bits/os_defines.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QObject \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qatomic.h \
@@ -226,6 +233,7 @@
   /usr/include/c++/10/bits/uses_allocator.h \
   /usr/include/c++/10/bits/vector.tcc \
   /usr/include/c++/10/cctype \
+  /usr/include/c++/10/chrono \
   /usr/include/c++/10/clocale \
   /usr/include/c++/10/compare \
   /usr/include/c++/10/concepts \
@@ -262,6 +270,7 @@
   /usr/include/c++/10/pstl/glue_algorithm_defs.h \
   /usr/include/c++/10/pstl/glue_memory_defs.h \
   /usr/include/c++/10/pstl/glue_numeric_defs.h \
+  /usr/include/c++/10/random \
   /usr/include/c++/10/ranges \
   /usr/include/c++/10/stdexcept \
   /usr/include/c++/10/stdlib.h \

@@ -19,7 +19,9 @@ public slots:
 
 signals:
     void scoreUpdated(int newScore);
-    void gameEnded();
+    void gameStarted();  // Signal to indicate the game has started
+    void gameEnded();    // Signal to indicate the game has ended
+    void countdownUpdated(int timeLeft); // New signal for countdown updates
 
 private:
     GameController gameController;
