@@ -1,40 +1,25 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/GameController.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/HighScore.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/LEDMatrix.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Player.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Hardware/Timer.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/HardwareInterface.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/Whac-A-Mole_autogen/mocs_compilation.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/Whac-A-Mole_autogen/mocs_compilation.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/gamepage.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/gamepage.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/main.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/main.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/mainwindow.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/mainwindow.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/playpage.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o"
-  "/home/rasberrypi/Desktop/group7/Whac-A-Mole/scorespage.cpp" "/home/rasberrypi/Desktop/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir/scorespage.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "QT_CORE_LIB"
-  "QT_GUI_LIB"
-  "QT_NO_DEBUG"
-  "QT_WIDGETS_LIB"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "Whac-A-Mole_autogen/include"
-  "/usr/include/arm-linux-gnueabihf/qt5"
-  "/usr/include/arm-linux-gnueabihf/qt5/QtWidgets"
-  "/usr/include/arm-linux-gnueabihf/qt5/QtGui"
-  "/usr/include/arm-linux-gnueabihf/qt5/QtCore"
-  "/usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-g++"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/nasri/group7/Whac-A-Mole/Hardware/GameController.cpp" "CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/Hardware/GameController.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/Hardware/HighScore.cpp" "CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/Hardware/HighScore.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/Hardware/LEDMatrix.cpp" "CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/Hardware/LEDMatrix.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/Hardware/Player.cpp" "CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/Hardware/Player.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/Hardware/Timer.cpp" "CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/Hardware/Timer.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/HardwareInterface.cpp" "CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/Whac-A-Mole_autogen/mocs_compilation.cpp" "CMakeFiles/Whac-A-Mole.dir/Whac-A-Mole_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/Whac-A-Mole_autogen/mocs_compilation.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/gamepage.cpp" "CMakeFiles/Whac-A-Mole.dir/gamepage.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/gamepage.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/main.cpp" "CMakeFiles/Whac-A-Mole.dir/main.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/main.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/mainwindow.cpp" "CMakeFiles/Whac-A-Mole.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/mainwindow.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/playpage.cpp" "CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o.d"
+  "/home/nasri/group7/Whac-A-Mole/scorespage.cpp" "CMakeFiles/Whac-A-Mole.dir/scorespage.cpp.o" "gcc" "CMakeFiles/Whac-A-Mole.dir/scorespage.cpp.o.d"
   )
 
 # Targets to which this target links.

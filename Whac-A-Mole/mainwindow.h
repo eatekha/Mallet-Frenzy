@@ -1,11 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-
 #include <QMainWindow>
 #include <QPushButton>
 
+#include <string>
 
+bool playAudio(const std::string &audioPath);
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -26,7 +27,7 @@ private:
     QPushButton *gamescoresButton;
     QPushButton *exitButton;
 
-    void animateButton(QPushButton* button);
+    void animateButton(QPushButton *button);
 };
 
 #endif // MAINWINDOW_H

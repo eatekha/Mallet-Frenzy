@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Whac-A-Mole_autogen"
+  "Whac-A-Mole_autogen/include/ui_mainwindow.h"
   "Whac-A-Mole_autogen/mocs_compilation.cpp"
 )
 
