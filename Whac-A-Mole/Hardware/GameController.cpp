@@ -62,7 +62,7 @@ void GameController::inGame(Player& player, HighScore& highScore) {
     endwin();
     gpioTerminate();
     std::cout << "Game Over! Your score is: " << player.getScore() << std::endl;
-    highScore.add(player.getScore(), player.getName());
+    //highScore.add(player.getScore(), player.getName());
 }
 
 void GameController::endGame(Player& player) {

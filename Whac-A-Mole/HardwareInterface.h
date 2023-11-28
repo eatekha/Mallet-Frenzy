@@ -13,15 +13,17 @@ public:
     explicit HardwareInterface(QObject *parent = nullptr);
     ~HardwareInterface();
 
+    void handleGame(const QString& playerName); // New method for game logic
+
 public slots:
     void startGame(const QString& playerName);
     void stopGame();
 
 signals:
     void scoreUpdated(int newScore);
-    void gameStarted();  // Signal to indicate the game has started
-    void gameEnded();    // Signal to indicate the game has ended
-    void countdownUpdated(int timeLeft); // New signal for countdown updates
+    void gameStarted();
+    void gameEnded();
+    void countdownUpdated(int timeLeft);
 
 private:
     GameController gameController;

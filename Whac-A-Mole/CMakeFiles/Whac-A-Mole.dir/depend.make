@@ -28,6 +28,7 @@ CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: Hardware/Timer.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: HardwareInterface.cpp
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: HardwareInterface.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QObject
+CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QTimer
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h
@@ -46,6 +47,8 @@ CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnuea
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainerfwd.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainertools_impl.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreevent.h
+CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdeadlinetimer.h
+CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qelapsedtimer.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qgenericatomic.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qglobal.h
@@ -78,6 +81,7 @@ CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnuea
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsysinfo.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h
+CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qthread.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtimer.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h
 CMakeFiles/Whac-A-Mole.dir/HardwareInterface.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvarlengtharray.h
@@ -671,6 +675,7 @@ CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: HardwareInterface.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: playpage.cpp
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: playpage.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QObject
+CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qatomic.h
@@ -689,7 +694,9 @@ CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontiguouscache.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreevent.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h
+CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdeadlinetimer.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdebug.h
+CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qelapsedtimer.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h
@@ -737,6 +744,7 @@ CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtextstream.h
+CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qthread.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurl.h
 CMakeFiles/Whac-A-Mole.dir/playpage.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurlquery.h

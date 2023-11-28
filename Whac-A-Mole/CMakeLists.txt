@@ -67,7 +67,7 @@ else()
 endif()
 
 # Link against the Qt Widgets, pigpio, and ncurses libraries
-target_link_libraries(Whac-A-Mole PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${PIGPIO_LIBRARY} ${NCURSES_LIBRARY})
+target_link_libraries(Whac-A-Mole PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${PIGPIO_LIBRARY} ${NCURSES_LIBRARY} pthread)
 
 set_target_properties(Whac-A-Mole PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Whac-A-Mole
