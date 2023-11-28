@@ -52,6 +52,7 @@
   /usr/include/arm-linux-gnueabihf/c++/10/bits/os_defines.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qatomic.h \
@@ -72,10 +73,13 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qhash.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qhashfunctions.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qiodevice.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qitemselectionmodel.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qiterator.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qline.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qlist.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qlocale.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qlogging.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qmap.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qmargins.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qmetatype.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qnamespace.h \
@@ -90,7 +94,9 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qrect.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qrefcount.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qregexp.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qregularexpression.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qscopedpointer.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qset.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qshareddata.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsharedpointer.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsharedpointer_impl.h \
@@ -105,6 +111,7 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvariant.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvarlengtharray.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvector.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qversiontagging.h \
@@ -114,6 +121,7 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qfont.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qfontinfo.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qfontmetrics.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qicon.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qimage.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qkeysequence.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h \
@@ -128,9 +136,32 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtgui-config.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtguiglobal.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtransform.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qvalidator.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qwindowdefs.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLabel \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QListWidget \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QVBoxLayout \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QWidget \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qboxlayout.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qframe.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qgridlayout.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlabel.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayout.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlistview.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qrubberband.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qsizepolicy.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qslider.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qstyle.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtabbar.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtabwidget.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtwidgets-config.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtwidgetsglobal.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qwidget.h \

@@ -2,6 +2,15 @@
 #include <fstream>
 #include <iostream>
 
+std::vector<std::pair<int, std::string>> HighScore::getHighScores() const {
+    std::vector<std::pair<int, std::string>> scores;
+    for (const auto& entry : highScoresMap) {
+        scores.push_back({entry.first, entry.second});
+    }
+    return scores;
+}
+
+
 void HighScore::print() {
     std::ifstream inputFile("highScores.txt");
     if (inputFile.is_open()) {
@@ -11,13 +20,12 @@ void HighScore::print() {
             highScoresMap.insert(std::make_pair(score, name));
         }
         inputFile.close();
-
+        
         std::cout << "Name " << "Score" << std::endl;
-        int count = 0;
-        for (auto rit = highScoresMap.rbegin(); rit != highScoresMap.rend() && count < 5; ++rit, ++count) {
+        for (auto rit = highScoresMap.rbegin(); rit != highScoresMap.rend(); ++rit) {
             std::cout << rit->second << " " << rit->first << std::endl;
         }
-        highScoresMap.clear();
+        
     } else {
         std::cerr << "Unable to open the file." << std::endl;
     }
