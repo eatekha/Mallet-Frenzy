@@ -14,7 +14,10 @@
 
 using namespace std;
 
-// Function to select the game mode
+/**
+ * Function to select the game mode.
+ * @return int The selected game mode or -1 on invalid input or exit.
+ */
 int selectGameMode() {
     int gameMode;
     cout << "Welcome to Whack-a-Mole!\n";
@@ -22,7 +25,7 @@ int selectGameMode() {
     int startGame;
     if (!(cin >> startGame)) {
         cin.clear(); // clear the error state
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard bad input
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard bad input
         cout << "Invalid input. Exiting Game.\n";
         return -1; // Indicates invalid input
     }
@@ -33,15 +36,16 @@ int selectGameMode() {
     cout << "Select Game Mode: \n1. Easy \n2. Medium \n3. Hard\n";
     if (!(cin >> gameMode) || (gameMode < 1 || gameMode > 3)) {
         cin.clear(); // clear the error state
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard bad input
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard bad input
         cout << "Invalid game mode. Exiting Game.\n";
         return -1; // Indicates invalid game mode
     }
     return gameMode;
 }
 
-
-// Timer Class
+/**
+ * Timer class for managing countdown in the game.
+ */
 class Timer {
 private:
     int timeLeft;
@@ -70,7 +74,9 @@ public:
     }
 };
 
-// LEDMatrix Class
+/**
+ * LEDMatrix class for managing the LED matrix in the game.
+ */
 class LEDMatrix {
 private:
     unordered_map<char, int> keyToLedMap;
@@ -79,10 +85,10 @@ public:
     LEDMatrix() {
         // Initialize LED pin numbers
         keyToLedMap = {
-            {'4', 15}, {'5', 24}, {'6', 8}, {'7', 20},
-            {'r', 14}, {'t', 23}, {'y', 7}, {'u', 21},
-            {'f', 3}, {'g', 17}, {'h', 5}, {'j', 19},
-            {'v', 2}, {'b', 27}, {'n', 6}, {'m', 26}
+                {'4', 15}, {'5', 24}, {'6', 8}, {'7', 20},
+                {'r', 14}, {'t', 23}, {'y', 7}, {'u', 21},
+                {'f', 3}, {'g', 17}, {'h', 5}, {'j', 19},
+                {'v', 2}, {'b', 27}, {'n', 6}, {'m', 26}
         };
     }
 
@@ -108,7 +114,9 @@ public:
     }
 };
 
-// Player Class
+/**
+ * Player class for managing player details.
+ */
 class Player {
 private:
     string name;
@@ -138,7 +146,9 @@ public:
     }
 };
 
-// HighScore Class
+/**
+ * HighScore class for managing high scores in the game.
+ */
 class HighScore {
 private:
     map<int, vector<pair<string, int>>> leaderboards;
@@ -148,232 +158,3 @@ public:
         ofstream outputFile("highScores.txt", ios::app);
         if (outputFile.is_open()) {
             outputFile << endl << playerName << " " << score;
-            outputFile.close();
-        } else {
-            cerr << "Unable to open the file for writing." << endl;
-        }
-    }
-
-    void print() {
-        ifstream inputFile("highScores.txt");
-        string name;
-        int score;
-        multimap<int, string> highScoresMap;
-
-        if (inputFile.is_open()) {
-            while (inputFile >> name >> score) {
-                highScoresMap.insert(make_pair(score, name));
-            }
-            inputFile.close();
-        } else {
-            cerr << "Unable to open the file." << endl;
-        }
-
-        cout << "Name " << "Score" << endl;
-        int count = 0;
-        for (auto rit = highScoresMap.rbegin(); rit != highScoresMap.rend() && count <
-
- 5; ++rit) {
-            cout << rit->second << " " << rit->first << endl;
-            count++;
-        }
-    }
-};
-
-// GameController Class
-class GameController {
-private:
-    Timer timer;
-    LEDMatrix ledMatrix;
-    Player currentPlayer;
-    
-    int lightUpRandomLEDAndWaitForInput(int currentLedPin);
-    int lightUpRandomLEDNoWait(int currentLedPin);
-    vector<int> lightUpMultipleRandomLEDs(vector<int>& activeLeds);
-
-public:
-    void startGame() {
-        cout << "Game started!\n";
-        timer.start();
-    }
-
-    void setup() {
-        if (gpioInitialise() < 0) {
-            throw runtime_error("Failed to initialize pigpio.");
-        }
-
-        const auto& keyToLedMap = ledMatrix.getKeyToLedMap();
-        for (auto const& kvp : keyToLedMap) {
-            gpioSetMode(kvp.second, PI_OUTPUT);
-            gpioWrite(kvp.second, 0); // Initially turn off all LEDs
-        }
-    }
-
-    void inGame(Player& player, HighScore& highScore, int gameMode) {
-        setup(); // Setup using LEDMatrix
-        initscr();
-        noecho();
-        cbreak();
-        keypad(stdscr, TRUE);
-        nodelay(stdscr, TRUE);
-        curs_set(0);
-
-        int currentLedPin = -1;
-        vector<int> activeLeds;
-
-        timer.start();
-        while (!timer.isTimeUp()) {
-            mvprintw(0, 0, "Time left: %d seconds ", timer.getTimeLeft());
-            mvprintw(1, 0, "Score: %d", player.getScore());
-            refresh();
-
-            switch (gameMode) {
-                case 1: // Easy
-                    currentLedPin = lightUpRandomLEDAndWaitForInput(currentLedPin);
-                    break;
-                case 2: // Medium
-                    currentLedPin = lightUpRandomLEDNoWait(currentLedPin);
-                    break;
-                case 3: // Hard
-                    activeLeds = lightUpMultipleRandomLEDs(activeLeds);
-                    break;
-                default:
-                    // Default behavior or error handling
-                    break;
-            }
-
-        }
-
-        endwin();
-        gpioTerminate();
-        cout << "Game Over! " << player.getName() << ", your final score is: " << player.getScore() << endl;
-        highScore.add(player.getScore(), player.getName());
-    }
-    
-    
-    /**
-     * @brief End message when the game is over
-     */
-    void endGame(Player& player) 
-    {
-        std::cout << "Game ended!\n";
-        timer.stop();
-        std::cout << "Final score: " << player.getScore() << "\n";
-    }
-
-};
-
-int GameController::lightUpRandomLEDAndWaitForInput(int currentLedPin) {
-        if (currentLedPin != -1) {
-            gpioWrite(currentLedPin, 0); // Turn off the current LED
-        }
-        int ledPin = ledMatrix.lightUpRandomLED(-1);
-        gpioWrite(ledPin, 1); // Turn on the LED
-        int ch = getch();
-            if (ch != ERR) {
-                const auto& keyToLedMap = ledMatrix.getKeyToLedMap();
-                if (keyToLedMap.count(ch) > 0) {
-                    if (keyToLedMap.at(ch) == currentLedPin) {
-                        gpioWrite(currentLedPin, 0);
-                        player.incrementScore();
-                    } else {
-                        player.decrementScore();
-                    }
-                }
-            }
-
-            this_thread::sleep_for(chrono::milliseconds(100));
-    }
-
-    int GameController::lightUpRandomLEDNoWait(int currentLedPin) {
-        if (currentLedPin != -1) {
-            gpioWrite(currentLedPin, 0); // Turn off the current LED
-        }
-        int ledPin = ledMatrix.lightUpRandomLED(-1);
-        gpioWrite(ledPin, 1); // Light up the LED
-        this_thread::sleep_for(chrono::milliseconds(500)); // Delay
-        gpioWrite(ledPin, 0); // Turn off the LED
-        return -1;
-    }
-
-    vector<int> GameController::lightUpMultipleRandomLEDs(vector<int>& activeLeds) {
-        for (int pin : activeLeds) {
-            gpioWrite(pin, 0); // Turn off all previous LEDs
-        }
-        activeLeds.clear();
-
-        for (int i = 0; i < 3; ++i) { // Light up 3 LEDs, for example
-            int ledPin = ledMatrix.lightUpRandomLED(-1);
-            gpioWrite(ledPin, 1);
-            activeLeds.push_back(ledPin);
-        }
-        this_thread::sleep_for(chrono::milliseconds(1000)); // LEDs stay lit for 1 second
-        return activeLeds;
-    }
-
-// Main Function
-int main() {
-    HighScore highScore;
-    GameController game;
-    Player player;
-    int gameMode;
-    int choice;
-
-    bool running = true;
-    while (running) {
-        cout << "Whack-a-LED Game\n";
-        cout << "1. Start Game\n";
-        cout << "2. Instructions\n";
-        cout << "3. High Scores\n";
-        cout << "4. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
-
-        switch (choice) {
-            case 1:
-                gameMode = selectGameMode();
-                game.startGame();
-                game.inGame(player, highScore, gameMode);
-                game.endGame(player);
-
-                break;
-            case 2:
-                cout << "Instructions:\n";
-                cout << "- The LED matrix will light up in random patterns.\n";
-                cout << "- Your goal is to 'hit' the lit LED by pressing the enter key as soon as it lights up.\n";
-                cout << "- The faster you hit, the more points you score.\n";
-                cout << "- The keybinds for the 4x4 matrix are set as follows:\n";
-                cout << "- 4  5  6  7\n";
-                cout << "- r  t  y  u\n";
-                cout << "- f  g  h  j\n";
-                cout << "- v  b  n  m\n";
-                cout << "- You have 30 seconds to score as many points as possible.\n\n";
-
-                break;
-            case 3:
-                cout << "High Scores: \n";
-                highScore.print();
-                getch();
-
-                break;
-            case 4:
-                running = false;
-                break;
-            default:
-                cout << "Invalid choice, please try again.\n";
-
-                break;
-        }
-
-        // Clear the input buffer in case of invalid input
-        if (cin.fail()) 
-        {
-            cin.clear(); // Clear the error flag
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore remaining input
-        }
-        
-    }
-
-
-    return 0;
-}

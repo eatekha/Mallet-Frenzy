@@ -4,8 +4,22 @@
 #include <thread>
 #include <chrono>
 #include <ncurses.h>
+
+/**
+ * @class GameController
+ * @brief Controls the game logic and interactions with hardware components.
+ *
+ * This class is responsible for initializing GPIO pins, managing game timing,
+ * handling user input, controlling LEDs, and maintaining game state.
+ */
 GameController::GameController() : timer(), ledMatrix(), currentPlayer() {}
 
+/**
+ * @brief Initializes the game environment.
+ *
+ * Sets up GPIO pins for LED control using the pigpio library. Throws runtime error
+ * if GPIO initialization fails.
+ */
 void GameController::setup() {
     if (gpioInitialise() < 0) {
         throw std::runtime_error("Failed to initialize pigpio.");
@@ -17,11 +31,25 @@ void GameController::setup() {
     }
 }
 
+/**
+ * @brief Starts the game.
+ *
+ * Marks the beginning of the game by starting the timer and printing a start message.
+ */
 void GameController::startGame() {
     std::cout << "Game started!\n";
     timer.start();
 }
 
+/**
+ * @brief Handles the in-game logic.
+ *
+ * Manages the game's running state, including lighting up LEDs, capturing user input,
+ * and updating the player's score. Ends when the timer is up.
+ *
+ * @param player Reference to the player's data.
+ * @param highScore Reference to the high score manager.
+ */
 void GameController::inGame(Player& player, HighScore& highScore) {
     initscr();
     noecho();
@@ -65,6 +93,13 @@ void GameController::inGame(Player& player, HighScore& highScore) {
     //highScore.add(player.getScore(), player.getName());
 }
 
+/**
+ * @brief Ends the game.
+ *
+ * Stops the game timer and prints the final score of the player.
+ *
+ * @param player Reference to the player's data.
+ */
 void GameController::endGame(Player& player) {
     std::cout << "Game ended!\n";
     timer.stop();

@@ -4,8 +4,15 @@
 #include <QDebug>
 #include <QDir>
 
+/**
+ * @class ScoresPage
+ * @brief Class responsible for displaying high scores in the application.
+ *
+ * This class sets up and displays a page showing high scores. It includes a QLabel for the title,
+ * a QListWidget for listing scores, and a QPushButton to return to the main menu.
+ */
 ScoresPage::ScoresPage(const QSize &size, QWidget *parent)
-    : QWidget(parent) {
+        : QWidget(parent) {
     setFixedSize(size);
     setStyleSheet("background-color: #857be6;"); // Set the background color
 
@@ -16,12 +23,11 @@ ScoresPage::ScoresPage(const QSize &size, QWidget *parent)
 
     scoresListWidget = new QListWidget(this);
     scoresListWidget->setStyleSheet(
-        "QListWidget { font-size: 20px; background-color: #f3e5f5; border-radius: 5px; }"
-        "QListWidget::item { border-bottom: 1px solid #b39ddb; padding: 5px; }"
-        "QListWidget::item:nth-child(even) { background-color: #ede7f6; }"
+            "QListWidget { font-size: 20px; background-color: #f3e5f5; border-radius: 5px; }"
+            "QListWidget::item { border-bottom: 1px solid #b39ddb; padding: 5px; }"
+            "QListWidget::item:nth-child(even) { background-color: #ede7f6; }"
     );
 
-    // Create and style the Return button
     returnButton = new QPushButton(this);
     QPixmap returnPixmap("return.png"); // Replace with your image path
     returnPixmap = returnPixmap.scaled(QSize(190, 80), Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -43,6 +49,13 @@ ScoresPage::ScoresPage(const QSize &size, QWidget *parent)
     updateHighScores(scoresListWidget);
 }
 
+/**
+ * @brief Updates the list widget with high scores.
+ *
+ * Retrieves high scores from the HighScore class and populates the QListWidget with these scores.
+ *
+ * @param scoresListWidget Pointer to the QListWidget that displays the scores.
+ */
 void ScoresPage::updateHighScores(QListWidget* scoresListWidget) {
     HighScore highScore;
     highScore.print();
@@ -60,6 +73,11 @@ void ScoresPage::updateHighScores(QListWidget* scoresListWidget) {
     }
 }
 
+/**
+ * @brief Slot to handle the return button click.
+ *
+ * Emits a signal to return to the main menu when the return button is clicked.
+ */
 void ScoresPage::onReturnButtonClicked() {
     emit returnToMainMenu();
 }
