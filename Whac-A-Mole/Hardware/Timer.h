@@ -10,6 +10,7 @@
  * This class is responsible for starting a countdown timer, stopping it,
  * and providing information about the time left and whether the time is up.
  * It uses the std::chrono library for time measurements.
+ * @author Anubhav Aery
  */
 class Timer {
 public:

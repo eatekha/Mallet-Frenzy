@@ -13,6 +13,7 @@
  * This class encapsulates the interaction with the game hardware, including the game controller,
  * player data, and high score management. It offers functionality to start and stop the game,
  * handle the game's logic, and emit relevant signals during the game's lifecycle.
+ * @author Anubhav Aery
  */
 class HardwareInterface : public QObject {
     Q_OBJECT

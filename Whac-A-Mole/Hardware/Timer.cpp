@@ -9,6 +9,7 @@
  *
  * This class provides functionalities for starting, stopping, and checking a countdown timer.
  * It is used to keep track of the remaining time in a game scenario.
+ * @author Anubhav Aery
  */
 Timer::Timer() : timeLeft(30) {}
 

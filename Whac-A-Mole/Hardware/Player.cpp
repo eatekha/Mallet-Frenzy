@@ -7,6 +7,7 @@
  * This class is responsible for storing and manipulating player-specific information,
  * including their name and score. It provides methods to set and get the player's name,
  * retrieve the score, and modify the score through increments and decrements.
+ * @author Anubhav Aery
  */
 Player::Player() : score(0) {}
 

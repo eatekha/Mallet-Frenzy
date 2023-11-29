@@ -10,6 +10,7 @@
  *
  * This class sets up and displays a page showing high scores. It includes a QLabel for the title,
  * a QListWidget for listing scores, and a QPushButton to return to the main menu.
+ * @author Yangxiuye Gu
  */
 ScoresPage::ScoresPage(const QSize &size, QWidget *parent)
         : QWidget(parent) {

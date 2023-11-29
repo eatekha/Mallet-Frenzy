@@ -17,6 +17,7 @@
  * The vector is sorted based on the score.
  *
  * @return Vector of pairs with score and player name.
+ * @author Eseosa Emmanuel Atekha
  */
 std::vector<std::pair<int, std::string>> HighScore::getHighScores() const {
     std::vector<std::pair<int, std::string>> scores;

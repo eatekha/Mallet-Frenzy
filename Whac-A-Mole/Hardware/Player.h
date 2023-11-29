@@ -10,6 +10,7 @@
  * The Player class is responsible for storing and updating player-specific data such as
  * the player's name and their score in the game. It provides methods for setting the name,
  * getting the name and score, and modifying the score.
+ * @author Anubhav Aery
  */
 class Player {
 public:

@@ -13,6 +13,7 @@
  *
  * This class is responsible for setting up and displaying the game play interface.
  * It includes player name input, start button, welcome label, countdown, and score display.
+ * @author Yangxiuye Gu
  */
 PlayPage::PlayPage(const QSize &size, QWidget *parent)
         : QWidget(parent), hardwareInterface(new HardwareInterface(this)) {

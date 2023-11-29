@@ -10,6 +10,7 @@
  *
  * This class is responsible for associating specific keys with LED GPIO pins and
  * controlling the lighting of these LEDs. It includes functionality to light up a random LED.
+ * @author Anubhav Aery
  */
 class LEDMatrix {
 public:

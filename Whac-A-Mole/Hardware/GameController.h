@@ -13,6 +13,7 @@
  * The GameController class is responsible for initializing the game environment,
  * handling game state, processing player inputs, controlling LED matrix, and managing
  * the game timer. It acts as the central component coordinating various aspects of the game.
+ * @author Anubhav Aery
  */
 class GameController {
 public:

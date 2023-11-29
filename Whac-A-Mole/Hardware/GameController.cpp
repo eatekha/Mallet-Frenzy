@@ -11,6 +11,7 @@
  *
  * This class is responsible for initializing GPIO pins, managing game timing,
  * handling user input, controlling LEDs, and maintaining game state.
+ * @author Anubhav Aery
  */
 GameController::GameController() : timer(), ledMatrix(), currentPlayer() {}
 
@@ -19,6 +20,7 @@ GameController::GameController() : timer(), ledMatrix(), currentPlayer() {}
  *
  * Sets up GPIO pins for LED control using the pigpio library. Throws runtime error
  * if GPIO initialization fails.
+ * @author Anubhav Aery
  */
 void GameController::setup() {
     if (gpioInitialise() < 0) {
@@ -35,6 +37,7 @@ void GameController::setup() {
  * @brief Starts the game.
  *
  * Marks the beginning of the game by starting the timer and printing a start message.
+ * @author Anubhav Aery
  */
 void GameController::startGame() {
     std::cout << "Game started!\n";
@@ -49,6 +52,7 @@ void GameController::startGame() {
  *
  * @param player Reference to the player's data.
  * @param highScore Reference to the high score manager.
+ * @author Anubhav Aery
  */
 void GameController::inGame(Player& player, HighScore& highScore) {
     initscr();
@@ -99,6 +103,7 @@ void GameController::inGame(Player& player, HighScore& highScore) {
  * Stops the game timer and prints the final score of the player.
  *
  * @param player Reference to the player's data.
+ * @author Anubhav Aery
  */
 void GameController::endGame(Player& player) {
     std::cout << "Game ended!\n";
