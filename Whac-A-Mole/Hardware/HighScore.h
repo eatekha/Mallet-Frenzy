@@ -13,6 +13,7 @@
  * This class handles the storage, retrieval, and updating of high scores. It supports
  * reading and writing high score data to a file and provides functionalities to print
  * and retrieve sorted high score entries.
+ * @author Eseosa Emmanuel Atekha
  */
 class HighScore {
 public:

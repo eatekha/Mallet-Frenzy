@@ -8,6 +8,7 @@
  *
  * This class is responsible for associating keys with specific LEDs in the matrix
  * and controlling these LEDs, including lighting up a random LED.
+ * @author Anubhav Aery
  */
 LEDMatrix::LEDMatrix() {
     // Initialize LED pin numbers

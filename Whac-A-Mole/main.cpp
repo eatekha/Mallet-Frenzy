@@ -7,6 +7,7 @@
  *
  * This file contains the main function, which initializes the QApplication,
  * sets up the main window, and starts the event loop.
+ * @author Yangxiuye Gu
  */
 
 /**

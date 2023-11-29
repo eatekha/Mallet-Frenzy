@@ -5,6 +5,7 @@
  * This file contains the declaration of the GamePage class, which is a part of
  * the graphical user interface in a game application. It includes the setup and
  * functionality for the game's main page.
+ * @author Yangxiuye Gu
  */
 
 #ifndef GAMEPAGE_H

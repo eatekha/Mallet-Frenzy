@@ -21,6 +21,7 @@
  *
  * @param audioPath Path to the audio file as a std::string.
  * @return True if the audio plays successfully, false otherwise.
+ * @author Nasri Hussein
  */
 bool playAudio(const std::string &audioPath)
 {

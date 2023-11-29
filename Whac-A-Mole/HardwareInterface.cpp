@@ -9,6 +9,7 @@
  * The HardwareInterface class is responsible for interfacing with the game hardware.
  * It includes methods for starting and stopping the game, handling the game logic,
  * and managing game-related events and signals.
+ * @author Anubhav Aery
  */
 HardwareInterface::HardwareInterface(QObject *parent)
         : QObject(parent), gameController(), player(), highScore() {

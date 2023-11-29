@@ -15,6 +15,7 @@
  * This function creates an animation that makes the button appear to shrink briefly and then revert back to its original size.
  *
  * @param button Pointer to the QPushButton to be animated.
+ * @author Yangxiuye Gu
  */
 void animateButton(QPushButton* button) {
     QPropertyAnimation* animation = new QPropertyAnimation(button, "geometry");
