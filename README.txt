@@ -10,15 +10,23 @@ To compile the Whack-a-LED game on your Raspberry Pi, follow these steps:
 
 1. Open a terminal window.
 2. Change directory to the location of your game source files. For example:
-   cd ~/Desktop/group7
+   cd ~/Desktop/group7/Whac-A-Mole
 
-3. Compile the game using the following command:
-   g++ -std=c++11 -o game WacAMole.cpp -lpigpio -pthread -lncurses
-
+3. Compile and run the game using the following command:
+   rm -r build
+   mkdir -p build && cd build
+   cmake ..
+   cmake --build .
+   mv Whac-A-Mole ..
+   cd ..
+   sudo ./Whac-A-Mole
+   
 Make sure you have the pigpio library and ncurses installed on your Raspberry Pi. If not, you can install them using:
    sudo apt-get update
    sudo apt-get install pigpio
    sudo apt-get install libncurses5-dev libncursesw5-dev
+   sudo apt-get install cmake G++
+   sudo apt-get install qtbase5-dev qt5-qmake qtbase5-dev-tools
 
 ================
 Running the Game
@@ -26,7 +34,7 @@ Running the Game
 
 To run the game, use the following command in the terminal window:
 
-   sudo ./game
+   sudo ./Whac-A-Mole
 
 The 'sudo' command is necessary because the pigpio library requires root privileges to access the GPIO pins.
 
