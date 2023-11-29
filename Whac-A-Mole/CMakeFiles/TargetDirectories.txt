@@ -1,8 +1,0 @@
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole.dir
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/edit_cache.dir
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/rebuild_cache.dir
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/list_install_components.dir
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/install.dir
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/install/local.dir
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/install/strip.dir
-/home/nasri/group7/Whac-A-Mole/CMakeFiles/Whac-A-Mole_autogen.dir

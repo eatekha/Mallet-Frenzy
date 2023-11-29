@@ -8,20 +8,14 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-#-------------------------------------------------------------------
-find_package(SDL2 REQUIRED)
 
-#--------------------------------------------------------------------------
+find_package(SDL2 REQUIRED)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 # Find the pigpio and ncurses libraries on the system
 find_library(PIGPIO_LIBRARY pigpio)
 find_library(NCURSES_LIBRARY ncurses)
-
-# Find SDL2 library
-find_package(SDL2 REQUIRED)
-
 
 set(HARDWARE_SOURCES
         Hardware/Timer.cpp
@@ -97,7 +91,6 @@ install(TARGETS Whac-A-Mole
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
-
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Whac-A-Mole)

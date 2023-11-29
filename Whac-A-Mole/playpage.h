@@ -2,19 +2,36 @@
 #define PLAYPAGE_H
 
 #include <QWidget>
-#include "HardwareInterface.h"  // Include the HardwareInterface header
+#include <QLabel>
+#include <QPushButton>
+#include <QLineEdit>
+#include "HardwareInterface.h" 
 
 class PlayPage : public QWidget {
     Q_OBJECT
 
 public:
     explicit PlayPage(const QSize &size, QWidget *parent = nullptr);
-    ~PlayPage();  // Declare the destructor if you have specific cleanup logic
+    ~PlayPage();  // Destructor
+
+signals:
+    void returnToMainWindowRequested(); // Signal to return to the main window
 
 private:
-    HardwareInterface* hardwareInterface;  // Declare hardwareInterface as a member variable
+    HardwareInterface* hardwareInterface;  // Hardware interface
 
-    // Other member variables
+    // UI elements as member variables
+    QLineEdit* usernameInput;      // Input field for username
+    QLabel* welcomeLabel;          // Label to display welcome message
+    QPushButton* startButton;      // Button to start the game
+    QLabel* countdownLabel;        // Label to display countdown
+    QLabel* scoreLabel;            // Label to display score
+    QLabel* gameStatusLabel;       // Label to display game status
+
+    QPushButton* returnToMainWindowButton; // New member for the return button
+
+    // You can add more member variables as needed
 };
 
 #endif // PLAYPAGE_H
+

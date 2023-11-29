@@ -10,20 +10,20 @@
 #include "mainwindow.h"
 
 // Define the animation function
-void animateButton(QPushButton *button)
-{
-    QPropertyAnimation *animation = new QPropertyAnimation(button, "geometry");
+void animateButton(QPushButton* button) {
+    QPropertyAnimation* animation = new QPropertyAnimation(button, "geometry");
     animation->setDuration(100);
     QRect startGeometry = button->geometry();
     QRect endGeometry = startGeometry.adjusted(5, 5, -5, -5); // Shrink by 5 pixels on each side
     animation->setStartValue(startGeometry);
     animation->setEndValue(endGeometry);
-    QPropertyAnimation *revertAnimation = new QPropertyAnimation(button, "geometry");
+
+    QPropertyAnimation* revertAnimation = new QPropertyAnimation(button, "geometry");
     revertAnimation->setDuration(100);
     revertAnimation->setStartValue(endGeometry);
     revertAnimation->setEndValue(startGeometry);
 
-    QSequentialAnimationGroup *group = new QSequentialAnimationGroup;
+    QSequentialAnimationGroup* group = new QSequentialAnimationGroup;
     group->addAnimation(animation);
     group->addAnimation(revertAnimation);
     group->start(QAbstractAnimation::DeleteWhenStopped);
@@ -34,21 +34,18 @@ GamePage::GamePage(const QSize &size, QWidget *parent)
 {
     setFixedSize(size);
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setAlignment(Qt::AlignCenter);             // Center the content in the layout
+    layout->setAlignment(Qt::AlignCenter); // Center the content in the layout
     this->setStyleSheet("background-color: #857be6;"); // Set the background color
 
     // Create a label to display the image with instructions
     QLabel *instructionsImageLabel = new QLabel(this);
     QPixmap instructionsPixmap("ruleimage.png");
 
-    if (!instructionsPixmap.isNull())
-    {
+    if (!instructionsPixmap.isNull()) {
         QSize scaledSize = size * 0.9; // Example: Scale down to 90% of the GamePage size
         instructionsImageLabel->setPixmap(instructionsPixmap.scaled(scaledSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
         instructionsImageLabel->setAlignment(Qt::AlignCenter);
-    }
-    else
-    {
+    } else {
         qDebug() << "Failed to load the instructions image.";
     }
 
@@ -56,22 +53,20 @@ GamePage::GamePage(const QSize &size, QWidget *parent)
     QPushButton *playButton = new QPushButton(this);
     QPixmap playButtonPixmap("play.png");
 
-    if (!playButtonPixmap.isNull())
-    {
+    if (!playButtonPixmap.isNull()) {
         playButtonPixmap = playButtonPixmap.scaled(QSize(190, 70), Qt::KeepAspectRatio, Qt::SmoothTransformation);
         playButton->setIcon(QIcon(playButtonPixmap));
         playButton->setIconSize(playButtonPixmap.size());
         playButton->setFixedSize(QSize(190, 70));
         playButton->setStyleSheet("border: none;");
         // Connect the pressed signal to the animate button function
-        connect(playButton, &QPushButton::pressed, [playButton]()
-                { animateButton(playButton); 
-                playAudio("Click.wav"); });
+        connect(playButton, &QPushButton::pressed, [playButton]() 
+        { animateButton(playButton); 
+            playAudio("Click.wav");
+        });
         // Connect the clicked signal to the start game slot
         connect(playButton, &QPushButton::clicked, this, &GamePage::startGame);
-    }
-    else
-    {
+    } else {
         qDebug() << "Failed to load the play button image.";
     }
 
@@ -82,15 +77,12 @@ GamePage::GamePage(const QSize &size, QWidget *parent)
     this->setLayout(layout);
 }
 
-void GamePage::startGame()
-{
-
+void GamePage::startGame() {
     qDebug() << "Play button clicked, transitioning to play page.";
     // Hide the current game instructions page
     this->hide();
 
     // Create and show the play page
-
     PlayPage *playPage = new PlayPage(this->size(), this->parentWidget()); // Pass the size and parent
     playPage->show();
 }

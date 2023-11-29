@@ -52,11 +52,10 @@ bool playAudio(const std::string &audioPath)
 
     return true;
 }
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-
-    ////////////////////////////////////////////////////////////////////
     // Set window title and fixed window size
     setWindowTitle("Whac-A-Mole Game");
     setFixedSize(900, 758);
@@ -71,19 +70,16 @@ MainWindow::MainWindow(QWidget *parent)
     // Create a QLabel for the GIF
     QLabel *gifLabel = new QLabel(this);
     QMovie *movie = new QMovie("molegif.gif");
-    if (movie->isValid())
-    {
+    if (movie->isValid()) {
         gifLabel->setMovie(movie);
         movie->start();
-    }
-    else
-    {
+    } else {
         qDebug() << "Failed to load the GIF.";
     }
 
-    gifLabel->setScaledContents(true); // Ensure the GIF scales with the label size
-    int gifWidth = 170;                // Set desired width for the GIF
-    int gifHeight = 170;               // Set desired height for the GIF
+    gifLabel->setScaledContents(true);
+    int gifWidth = 170;
+    int gifHeight = 170;
     gifLabel->setFixedSize(gifWidth, gifHeight);
     gifLabel->setAlignment(Qt::AlignCenter);
 
@@ -91,17 +87,13 @@ MainWindow::MainWindow(QWidget *parent)
     QWidget *centralWidget = new QWidget(this);
     QVBoxLayout *layout = new QVBoxLayout(centralWidget);
 
-    // Add stretch before the GIF label to push it down
     layout->addStretch(15);
-
-    // Add the GIF label to the layout
     layout->addWidget(gifLabel, 0, Qt::AlignCenter);
 
-    // Initialize buttons with images
     startButton = setupButtonWithImage("pressstart.png", QSize(200, 80));
     gamescoresButton = setupButtonWithImage("gamescores.png", QSize(200, 80));
     exitButton = setupButtonWithImage("exit.png", QSize(200, 80));
-    // Add buttons to layout
+
     layout->addStretch(1);
     layout->addWidget(startButton, 0, Qt::AlignCenter);
     layout->addWidget(gamescoresButton, 0, Qt::AlignCenter);
@@ -111,77 +103,79 @@ MainWindow::MainWindow(QWidget *parent)
     centralWidget->setLayout(layout);
     setCentralWidget(centralWidget);
 
-    // Connect buttons to slots
     connect(startButton, &QPushButton::clicked, this, &MainWindow::on_startButton_clicked);
     connect(gamescoresButton, &QPushButton::clicked, this, &MainWindow::on_gamescoresButton_clicked);
     connect(exitButton, &QPushButton::clicked, this, &MainWindow::on_exitButton_clicked);
+
+    scoresPage = nullptr; // Initialize scoresPage as nullptr
 }
 
-QPushButton *MainWindow::setupButtonWithImage(const QString &imagePath, const QSize &size)
-{
+QPushButton* MainWindow::setupButtonWithImage(const QString &imagePath, const QSize &size) {
     QPushButton *button = new QPushButton(this);
     QPixmap pixmap(imagePath);
     pixmap = pixmap.scaled(size, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     button->setIcon(QIcon(pixmap));
     button->setIconSize(size);
     button->setFixedSize(size);
+    button->setStyleSheet("QPushButton { border: none; background-color: transparent; }"
+                          "QPushButton:pressed { background-color: rgba(255, 255, 255, 100); }");
 
-    button->setStyleSheet(
-        "QPushButton { border: none; background-color: transparent; }"
-        "QPushButton:pressed { background-color: rgba(255, 255, 255, 100); }");
-
-    connect(button, &QPushButton::pressed, this, [this, button]()
-            { animateButton(button); 
-            playAudio("Click.wav"); });
+    connect(button, &QPushButton::pressed, this, [this, button]() 
+    { 
+       animateButton(button);
+       playAudio("Click.wav"); 
+    });
 
     return button;
 }
 
-void MainWindow::animateButton(QPushButton *button)
-{
-    QPropertyAnimation *animation = new QPropertyAnimation(button, "geometry");
+void MainWindow::animateButton(QPushButton* button) {
+    QPropertyAnimation* animation = new QPropertyAnimation(button, "geometry");
     animation->setDuration(100);
-    animation->setStartValue(button->geometry());
-    QRect endGeometry = button->geometry();
-    endGeometry.setWidth(endGeometry.width() - 10);
-    endGeometry.setHeight(endGeometry.height() - 10);
-    endGeometry.moveCenter(button->geometry().center());
+    QRect startGeometry = button->geometry();
+    QRect endGeometry = startGeometry.adjusted(5, 5, -5, -5);
+    animation->setStartValue(startGeometry);
     animation->setEndValue(endGeometry);
 
-    QPropertyAnimation *revertAnimation = new QPropertyAnimation(button, "geometry");
+    QPropertyAnimation* revertAnimation = new QPropertyAnimation(button, "geometry");
     revertAnimation->setDuration(100);
     revertAnimation->setStartValue(endGeometry);
-    revertAnimation->setEndValue(button->geometry());
+    revertAnimation->setEndValue(startGeometry);
 
-    QSequentialAnimationGroup *group = new QSequentialAnimationGroup;
+    QSequentialAnimationGroup* group = new QSequentialAnimationGroup;
     group->addAnimation(animation);
     group->addAnimation(revertAnimation);
     group->start(QAbstractAnimation::DeleteWhenStopped);
 }
 
-void MainWindow::on_startButton_clicked()
-{
-    QSize currentSize = this->size(); // Get the current size of MainWindow
-    this->hide();                     // Hide the main window
+void MainWindow::on_startButton_clicked() {
+    QSize currentSize = this->size();
+    this->hide();
 
-    GamePage *gamePage = new GamePage(currentSize); // Pass the size to GamePage
-    gamePage->show();                               // Show the game page
+    GamePage *gamePage = new GamePage(currentSize);
+    gamePage->show();
 }
 
-#include "scorespage.h"
-// ...
+void MainWindow::on_gamescoresButton_clicked() {
+    this->hide();
 
-void MainWindow::on_gamescoresButton_clicked()
-{
-    QSize currentSize = this->size(); // Get the current size of MainWindow
-    this->hide();                     // Hide the main window
+    if (!scoresPage) { 
+        QSize currentSize = this->size();
+        scoresPage = new ScoresPage(currentSize);
+        connect(scoresPage, &ScoresPage::returnToMainMenu, this, &MainWindow::returnToMainMenu);
+    }
 
-    ScoresPage *scoresPage = new ScoresPage(currentSize); // Pass the size to ScoresPage
-    scoresPage->show();                                   // Show the scores page
+    scoresPage->show();
 }
 
-void MainWindow::on_exitButton_clicked()
-{
+void MainWindow::returnToMainMenu() {
+    this->show();
+    if (scoresPage) {
+        scoresPage->hide();
+    }
+}
+
+void MainWindow::on_exitButton_clicked() {
     playAudio("Click.wav");
     QApplication::quit();
 }
